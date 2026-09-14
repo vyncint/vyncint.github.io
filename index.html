@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vyncint Ng</title>
+<meta name="description" content="Rust systems developer: GPU tooling, terminal testing infrastructure, Kubernetes. Creator of termlens; contributor to NVlabs/cuda-oxide and kube-logging/logging-operator.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f172a'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='18' text-anchor='middle' fill='%23f97316'%3EV%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--bg:#0b0f17;--panel:#111827;--line:#1f2937;--text:#e5e7eb;--muted:#9ca3af;--accent:#f97316;--link:#93c5fd}
+  @media (prefers-color-scheme: light){:root{--bg:#f8fafc;--panel:#ffffff;--line:#e5e7eb;--text:#111827;--muted:#4b5563;--accent:#c2410c;--link:#1d4ed8}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;padding-block:0 3rem;padding-inline:16px}
+  main{max-width:960px;margin:0 auto}
+  header{padding:3rem 0 1.5rem;text-align:center;border-bottom:1px solid var(--line)}
+  h1{margin:0 0 .35rem;font-size:2.2rem;letter-spacing:-.02em}
+  .tag{color:var(--muted);margin:0 0 .9rem}
+  .creds{margin:0 0 1rem}
+  .creds a{color:var(--link);text-decoration:none}
+  .creds a:hover{text-decoration:underline}
+  .badges img{height:20px;vertical-align:middle;margin:2px 1px}
+  .badges{margin:.5rem 0}
+  section{padding:1.75rem 0 .25rem}
+  h2{font-size:1.15rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 .9rem}
+  p{margin:.4rem 0 1rem}
+  a{color:var(--link)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .card h3{margin:0 0 .3rem;font-size:1.05rem}
+  .card h3 a{color:var(--text);text-decoration:none}
+  .card h3 a:hover{color:var(--accent)}
+  .card p{margin:0 0 .6rem;color:var(--muted);font-size:.95rem}
+  .card .badges{margin:0}
+  .kicker{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:.35rem}
+  table{width:100%;border-collapse:collapse;font-size:.95rem}
+  th,td{text-align:left;vertical-align:top;padding:10px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}
+  td:first-child{white-space:nowrap}
+  .tablewrap{overflow-x:auto}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:0 4px}
+  .principles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  footer{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+  .sub{color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Vyncint Ng</h1>
+  <p class="tag">Rust systems developer · GPU tooling · terminal testing infrastructure · Kubernetes · Go</p>
+  <p class="creds">Creator of <a href="https://github.com/vyncint/termlens">termlens</a> · #2 contributor to <a href="https://github.com/NVlabs/cuda-oxide">NVlabs/cuda-oxide</a> · #7 contributor to <a href="https://github.com/kube-logging/logging-operator">kube-logging/logging-operator</a></p>
+  <div class="badges">
+    <a href="https://github.com/vyncint"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-vyncint-181717?style=flat-square&logo=github"></a>
+    <a href="https://github.com/vyncint?tab=followers"><img alt="followers" src="https://img.shields.io/github/followers/vyncint?style=flat-square&logo=github&label=followers"></a>
+    <a href="https://crates.io/users/vyncint"><img alt="crates.io" src="https://img.shields.io/badge/crates.io-42%20published-orange?style=flat-square&logo=rust&logoColor=white"></a>
+  </div>
+  <div class="badges">
+    <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white">
+    <img alt="CUDA" src="https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white">
+    <img alt="PTX" src="https://img.shields.io/badge/PTX-76B900?style=flat-square">
+    <img alt="Metal" src="https://img.shields.io/badge/Metal-000000?style=flat-square&logo=apple&logoColor=white">
+    <img alt="Apache Arrow" src="https://img.shields.io/badge/Apache_Arrow-1F1F1F?style=flat-square&logo=apachearrow">
+    <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white">
+    <img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white">
+    <img alt="Swift" src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=swift&logoColor=white">
+  </div>
+</header>
+
+<section>
+  <p>I build Rust tools for testing terminal applications and analysing GPU kernels, and I work on Kubernetes operators and sandboxed agent runtimes. Most of my contributions are testing infrastructure and CI: making a tool's claims checkable, and catching the places where its documentation and its code disagree.</p>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <p class="sub">Six Rust products on crates.io. termlens tests the other five end to end: it runs each real binary in a pseudo-terminal and asserts on the rendered screen.</p>
+  <div class="grid">
+    <div class="card"><span class="kicker">Testing</span><h3><a href="https://github.com/vyncint/termlens">termlens</a></h3><p>Headless end-to-end testing for CLI and TUI apps: real PTYs, rendered-screen assertions, snapshots, screen diffs. The end-to-end example in Ratatui's <a href="https://ratatui.rs/recipes/testing/snapshots/">snapshot-testing recipe</a>.</p><div class="badges"><a href="https://crates.io/crates/termlens"><img alt="version" src="https://img.shields.io/crates/v/termlens?style=flat-square"></a> <img alt="downloads" src="https://img.shields.io/crates/d/termlens?style=flat-square"> <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/vyncint/termlens/ci.yml?branch=main&style=flat-square"> <img alt="docs" src="https://img.shields.io/docsrs/termlens?style=flat-square"></div></div>
+    <div class="card"><span class="kicker">GPU · static analysis</span><h3><a href="https://github.com/vyncint/reconverge">reconverge</a></h3><p>Static analysis for Rust GPU kernels: divergent barriers and warp-collective hazards, explained lane by lane. No GPU required.</p><div class="badges"><a href="https://crates.io/crates/cargo-reconverge"><img alt="version" src="https://img.shields.io/crates/v/cargo-reconverge?style=flat-square"></a> <img alt="downloads" src="https://img.shields.io/crates/d/cargo-reconverge?style=flat-square"> <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/vyncint/reconverge/ci.yml?branch=main&style=flat-square"></div></div>
+    <div class="card"><span class="kicker">GPU · autotuning</span><h3><a href="https://github.com/vyncint/launchbound">launchbound</a></h3><p>Autotuning for GPU kernels: a convergence check per configuration, CUDA and Metal benchmarking, analytical estimates.</p><div class="badges"><a href="https://crates.io/crates/launchbound-cli"><img alt="version" src="https://img.shields.io/crates/v/launchbound-cli?style=flat-square"></a> <img alt="downloads" src="https://img.shields.io/crates/d/launchbound-cli?style=flat-square"> <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/vyncint/launchbound/ci.yml?branch=main&style=flat-square"></div></div>
+    <div class="card"><span class="kicker">Deep learning</span><h3><a href="https://github.com/vyncint/oxmera">oxmera</a></h3><p>Tensor and deep-learning framework: autograd, CPU, Metal and CUDA backends, a terminal training dashboard.</p><div class="badges"><a href="https://crates.io/crates/oxmera"><img alt="version" src="https://img.shields.io/crates/v/oxmera?style=flat-square"></a> <img alt="downloads" src="https://img.shields.io/crates/d/oxmera?style=flat-square"> <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/vyncint/oxmera/ci.yml?branch=main&style=flat-square"></div></div>
+    <div class="card"><span class="kicker">Data</span><h3><a href="https://github.com/vyncint/oxidelake">oxidelake</a></h3><p>Arrow-native SQL engine on DataFusion or Ballista, with optional GPU acceleration and per-batch CPU fallback.</p><div class="badges"><a href="https://crates.io/crates/oxidelake-runtime"><img alt="version" src="https://img.shields.io/crates/v/oxidelake-runtime?style=flat-square"></a> <img alt="downloads" src="https://img.shields.io/crates/d/oxidelake-runtime?style=flat-square"> <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/vyncint/oxidelake/ci.yml?branch=main&style=flat-square"></div></div>
+    <div class="card"><span class="kicker">Terminal</span><h3><a href="https://github.com/vyncint/mossaic">mossaic</a></h3><p>Plan, draw and track GitHub contribution art, with pixel-rendered graphs in the terminal.</p><div class="badges"><a href="https://crates.io/crates/mossaic"><img alt="version" src="https://img.shields.io/crates/v/mossaic?style=flat-square"></a> <img alt="downloads" src="https://img.shields.io/crates/d/mossaic?style=flat-square"> <img alt="CI" src="https://img.shields.io/github/actions/workflow/status/vyncint/mossaic/ci.yml?branch=main&style=flat-square"></div></div>
+    <div class="card"><span class="kicker">Go · sandboxes</span><h3><a href="https://github.com/vyncint/openshell-driver-applecontainer">openshell-driver-applecontainer</a></h3><p>A compute driver for <a href="https://github.com/NVIDIA/OpenShell">NVIDIA OpenShell</a> backed by <a href="https://github.com/apple/container">apple/container</a>: one micro-VM per sandbox on Apple silicon, roughly one second to Ready.</p><div class="badges"><img alt="stars" src="https://img.shields.io/github/stars/vyncint/openshell-driver-applecontainer?style=flat-square"></div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Upstream</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Project</th><th>Contribution</th></tr></thead>
+    <tbody>
+    <tr><td><a href="https://github.com/NVlabs/cuda-oxide">NVlabs/cuda-oxide</a><br><img alt="stars" src="https://img.shields.io/github/stars/NVlabs/cuda-oxide?style=flat-square"><br><span class="sub">Rust-to-CUDA compiler</span></td><td><a href="https://github.com/NVlabs/cuda-oxide/pulls?q=is%3Apr+is%3Amerged+author%3Avyncint">165 merged pull requests</a>, second of 48 <a href="https://github.com/NVlabs/cuda-oxide/graphs/contributors">contributors</a>. Mostly documentation that had drifted from the code and CI gates that could not fail, plus compiler fixes such as <a href="https://github.com/NVlabs/cuda-oxide/pull/795">carrying proved alignment through a field store</a>.</td></tr>
+    <tr><td><a href="https://github.com/kube-logging/logging-operator">kube-logging/logging-operator</a><br><img alt="stars" src="https://img.shields.io/github/stars/kube-logging/logging-operator?style=flat-square"><br><span class="sub">Kubernetes logging operator</span></td><td><a href="https://github.com/kube-logging/logging-operator/pulls?q=is%3Apr+is%3Amerged+author%3Avyncint">33 merged pull requests</a>, seventh of 149 <a href="https://github.com/kube-logging/logging-operator/graphs/contributors">contributors</a>. Rebuilt the end-to-end suite on <a href="https://github.com/kube-logging/logging-operator/pull/2304">one shared harness</a> with <a href="https://github.com/kube-logging/logging-operator/pull/2288">time-bounded kind calls</a>; operator fixes for <a href="https://github.com/kube-logging/logging-operator/pull/2273">dual-stack Fluent Bit metrics</a>, <a href="https://github.com/kube-logging/logging-operator/pull/2272">custom CAs on S3 outputs</a> and <a href="https://github.com/kube-logging/logging-operator/pull/2285">dnsPolicy on the configcheck pod</a>.</td></tr>
+    <tr><td><a href="https://github.com/calfonso/rusternetes">calfonso/rusternetes</a><br><img alt="stars" src="https://img.shields.io/github/stars/calfonso/rusternetes?style=flat-square"><br><span class="sub">Kubernetes reimplemented in Rust</span></td><td><a href="https://github.com/calfonso/rusternetes/pulls?q=is%3Apr+is%3Amerged+author%3Avyncint">10 merged pull requests</a>, fourth of 12 <a href="https://github.com/calfonso/rusternetes/graphs/contributors">contributors</a>. Correctness fixes across the control plane: <a href="https://github.com/calfonso/rusternetes/pull/115">typed container-state timestamps</a>, <a href="https://github.com/calfonso/rusternetes/pull/99">negated field selectors on watch endpoints</a>, <a href="https://github.com/calfonso/rusternetes/pull/87">fractional and binary-SI resource quantities in the scheduler</a>, <a href="https://github.com/calfonso/rusternetes/pull/111">CronJob day-of-week numbering</a>.</td></tr>
+    <tr><td><a href="https://github.com/apple/containerization">apple/containerization</a><br><img alt="stars" src="https://img.shields.io/github/stars/apple/containerization?style=flat-square"><br><span class="sub">Linux containers on macOS</span></td><td><a href="https://github.com/apple/containerization/pull/813">Redact environment-variable values in <code>vminitd</code> debug logs</a>; <a href="https://github.com/apple/containerization/pull/827">consistent CIDR bounds for IPv4 and IPv6</a>.</td></tr>
+    <tr><td><a href="https://github.com/GoogleCloudPlatform/gcsfuse">GoogleCloudPlatform/gcsfuse</a><br><img alt="stars" src="https://img.shields.io/github/stars/GoogleCloudPlatform/gcsfuse?style=flat-square"><br><span class="sub">Cloud Storage as a file system</span></td><td><a href="https://github.com/GoogleCloudPlatform/gcsfuse/pull/4943">Report a symlink's size as the length of its target</a>.</td></tr>
+    <tr><td><a href="https://github.com/NVIDIA/OpenShell">NVIDIA/OpenShell</a><br><img alt="stars" src="https://img.shields.io/github/stars/NVIDIA/OpenShell?style=flat-square"><br><span class="sub">Runtime for autonomous agents</span></td><td><a href="https://github.com/NVIDIA/OpenShell/pull/2908">Show persisted guidance on rejected policy chunks in the TUI</a>.</td></tr>
+    <tr><td><a href="https://github.com/NVIDIA/NemoClaw">NVIDIA/NemoClaw</a><br><img alt="stars" src="https://img.shields.io/github/stars/NVIDIA/NemoClaw?style=flat-square"><br><span class="sub">Agents inside OpenShell</span></td><td><a href="https://github.com/NVIDIA/NemoClaw/pull/7463">Supply the Ultra template argument from the managed resolver</a>.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>How I work</h2>
+  <div class="principles">
+    <div class="card"><h3>Evidence over assertion</h3><p>A bug report states what was measured, against which released version.</p></div>
+    <div class="card"><h3>A check must be seen to fail</h3><p>Every new CI check is broken on purpose once, to prove it can fail, before it is trusted.</p></div>
+    <div class="card"><h3>Say what you did not do</h3><p>A pull request lists what it left out and why. A known gap is cheap; a false claim is expensive.</p></div>
+    <div class="card"><h3>AI-assisted, human-owned</h3><p>I use AI tools in development and take responsibility for reviewing, testing and maintaining the results.</p></div>
+  </div>
+  <p class="sub"><a href="https://github.com/vyncint/vyncint/blob/main/ENGINEERING.md">More on how these projects are built</a></p>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Open to collaboration on Rust tooling, GPU infrastructure, Kubernetes operators and testing. Open an issue or discussion on any repository above, or find me at <a href="https://github.com/vyncint">github.com/vyncint</a>.</p>
+</section>
+
+<footer>Vyncint Ng · <a href="https://github.com/vyncint/vyncint.github.io">source</a></footer>
+</main>
+</body>
+</html>
